@@ -1,4 +1,4 @@
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const ItemDetail =( { item } ) => {
     if (!item) {
@@ -15,7 +15,7 @@ const ItemDetail =( { item } ) => {
 }
 
 ItemDetail.propTypes = {
-        item: propTypes.object,
+        item: PropTypes.object,
     };
 
 export default ItemDetail;

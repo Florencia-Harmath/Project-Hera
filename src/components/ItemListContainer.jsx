@@ -15,7 +15,7 @@ const ItemlistContainer = () => {
         });
     }, [categoryId]);
 
-    return (<ItemList items={[items]} />)
+    return ( <ItemList items={items} /> )
 
 }
 

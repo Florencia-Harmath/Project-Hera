@@ -1,10 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const CartWidget = ({ notificationCount }) => {
   return (
     <div className="cart-widget">
-      <FontAwesomeIcon icon={faShoppingCart} size="lg" />
+      <FaShoppingCart size="lg" />
       {notificationCount > 0 && <span className="notification">{notificationCount}</span>}
     </div>
   );
