@@ -1,0 +1,19 @@
+body  {
+    background-color: rgba(234, 202, 207, 0.53);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open sans';
+}
+
+a {
+    text-decoration: none;
+}
+
+li  {
+    text-decoration: none;
+    list-style: none;
+}

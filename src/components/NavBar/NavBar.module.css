@@ -1,0 +1,46 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    border: solid 1px magenta;
+    box-shadow: 1px 1px 2px magenta;
+    width: 100%;
+    height: auto;
+    background-color: pink;
+    padding: 1em;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.enlaces-menu {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.enlaces-menu-item {
+    display: flex;
+    gap: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin: auto;
+    margin-left: 150px;    
+}
+
+.enlaces-menu-item-li {
+   color: black; 
+   font-size: 1.5rem;
+   margin-right: 15px;
+}
+
+.enlaces-menu-item-li:hover {
+    color: white;
+}
+
+.enlaces-menu-titulo {
+    color: black;
+    text-align: left;
+}
+
+.enlaces-menu-titulo:hover {
+    color: white;
+}

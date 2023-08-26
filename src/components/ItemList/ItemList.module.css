@@ -1,0 +1,21 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 0;
+    padding: 2em;
+    margin-right: 25px;
+}
+
+.parrafo-home {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: .5em;
+}
+
+.titulo-home {
+    background-color: pink;
+    padding: .2em;
+    text-align: center;
+
+}
