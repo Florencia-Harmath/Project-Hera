@@ -33,7 +33,7 @@
 }
 
 .enlaces-menu-item-li:hover {
-    color: white;
+    color: magenta;
 }
 
 .enlaces-menu-titulo {
@@ -42,5 +42,5 @@
 }
 
 .enlaces-menu-titulo:hover {
-    color: white;
+    color: magenta;
 }

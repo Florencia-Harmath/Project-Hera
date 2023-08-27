@@ -7,10 +7,10 @@ const ItemDetail = ({ item }) => {
 
   return (
     <div>
+      <img src={item.image} alt={item.name}/>  
       <h1>{item.name}</h1>
       <p>${item.price}</p>
       <p>{item.category}</p>
-      <p>{item.detalle}</p> 
     </div>
   );
 };

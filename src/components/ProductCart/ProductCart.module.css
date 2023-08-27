@@ -20,11 +20,11 @@
     width: 50%;
     margin: auto;
     border-radius: 10px;
-    border: 1px solid rgb(225, 82, 106);
+    border: 1px solid magenta;
   }
 
   .product-button:hover  {
-    background-color: rgb(229, 111, 130);
+    background-color: magenta;
     color: white;
   }
 
