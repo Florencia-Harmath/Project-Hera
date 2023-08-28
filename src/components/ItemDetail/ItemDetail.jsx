@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import styles from "./ItemDetail.module.css";
 
 const ItemDetail = ({ item }) => {
   if (!item) {
@@ -6,11 +7,10 @@ const ItemDetail = ({ item }) => {
   }
 
   return (
-    <div>
-      <img src={item.image} alt={item.name}/>  
-      <h1>{item.name}</h1>
-      <p>${item.price}</p>
-      <p>{item.category}</p>
+    <div className={styles['product-container']}>
+      <h1 className={styles['product-name']}>{item.name}</h1>
+      <img src={item.image} alt={item.name} className={styles['product-image']}/>      
+      <p className={styles['product-detalle']}>{item.detalle}</p>
     </div>
   );
 };

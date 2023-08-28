@@ -1,7 +1,7 @@
 .product-cart { 
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid magenta;
     text-align: center;
     border-radius: 5px;
     padding: 1rem;
@@ -30,4 +30,19 @@
 
   .product-name {
     font-size: 1.6rem;
+    color: black;
+  }
+
+  .product-name:hover {
+    color: magenta;
+    font-weight: bolder;
+  }
+
+  .product-image {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: solid 1px magenta;
   }

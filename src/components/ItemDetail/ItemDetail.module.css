@@ -1,0 +1,32 @@
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 500px;
+    gap: 15px;
+    margin: 10px;
+}
+
+.product-name {
+    grid-column: span 2;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: pink;
+    padding: .5em;
+}
+
+.product-image {
+    height: 100%;
+    width: 500px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.product-detalle {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+
