@@ -21,7 +21,7 @@ const NavBar = () => {
             <NavLink to="/category/capilares" className={styles['enlaces-menu-item-li']}>CAPILARES</NavLink>
           </li>
           <div>
-          <CartWidget />
+          <NavLink to="/cart" className={styles['enlaces-menu-item-cart']}><CartWidget /></NavLink>
         </div>
         </ul>
       </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getProducts } from "../../services";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
+import styles from "./ItemListContainer.module.css";
 
 const ItemlistContainer = () => {
   const [items, setItems] = useState([]);
@@ -17,7 +18,7 @@ const ItemlistContainer = () => {
   }, [categoryId]);
 
   if (loading) {
-    return <h2>   Cargando...</h2>;
+    return <span className={styles['loader']}></span>;
   }
 
   return <ItemList items={items} />;

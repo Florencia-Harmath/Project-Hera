@@ -90,7 +90,7 @@ export const getProduct = (id) => {
     setTimeout(() => {
       const product = products.find((p) => p.id === id);
       product ? resolve(product) : reject("No existe el producto");
-    }, 1000);
+    }, 1200);
   });
 };
 
@@ -101,7 +101,7 @@ export const getProducts = (category) => {
         ? products.filter((product) => product.category === category)
         : products;
       resolve(filteredProducts);
-    }, 1000);
+    }, 1200);
   });
 };
 

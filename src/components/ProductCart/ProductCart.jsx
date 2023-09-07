@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import styles from './ProductCart.module.css'
+import styles from './ProductCart.module.css';
+import ItemCount from '../ItemCount/ItemCount';
 
 const ProductCart = ({ product }) => {
   return (
@@ -9,7 +10,7 @@ const ProductCart = ({ product }) => {
         <h3 className={styles['product-name']}>{product.name}</h3>
       </Link>
       <p className={styles['product-price']}>${product.price}</p>
-      <button className={styles['product-button']}>Agregar al carrito</button>
+      < ItemCount initial={1} stock={20} onAdd={(quantily) => console.log('cantidad', quantily)} />
     </div>
   );
 };
