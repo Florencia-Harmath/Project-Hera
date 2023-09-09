@@ -1,12 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
-import CartWidget from '../CartWidget/CartWidget';
 import styles from './NavBar.module.css';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
-  
   return (
     <nav className={styles['nav']}>
-      <div className={styles['enlaces-menu']}> 
+      <div className={styles['enlaces-menu']}>
         <h1>
           <Link to="/" className={styles['enlaces-menu-titulo']}>HERA Cosmética</Link>
         </h1>
@@ -21,8 +20,10 @@ const NavBar = () => {
             <NavLink to="/category/capilares" className={styles['enlaces-menu-item-li']}>CAPILARES</NavLink>
           </li>
           <div>
-          <NavLink to="/cart" className={styles['enlaces-menu-item-cart']}><CartWidget /></NavLink>
-        </div>
+            <NavLink to="/cart" className={styles['enlaces-menu-item-cart']}>
+              <CartWidget />
+            </NavLink>
+          </div>
         </ul>
       </div>
     </nav>
@@ -30,3 +31,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+

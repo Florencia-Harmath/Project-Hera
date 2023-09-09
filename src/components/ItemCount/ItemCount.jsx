@@ -23,11 +23,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <h4 className={styles['number']}>{quantity}</h4>
                 <button className={styles['btn-controls']} onClick={increment} > + </button>
             </div>
-
-            <div>
-            <button className={styles['btn-agregar']} onClick= {() => onAdd(quantity)} disabled = {!stock} >Agregar al carrito</button>
-
-            </div>
         </div>
     )
 }
