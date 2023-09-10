@@ -18,9 +18,22 @@ export const CartProvider = ({ children }) => {
     }
 
     const removeItem = (itemId) => {
-        const cartUpdate = cart.filter(prod => prod.id !== itemId)
-        setCart(cartUpdate)
-    }
+      setCart((prevCart) => {
+        const updatedCart = [...prevCart];
+        const itemIndex = updatedCart.findIndex((item) => item.id === itemId);
+    
+        if (itemIndex !== -1) {
+          if (updatedCart[itemIndex].quantity === 1) {
+            updatedCart.splice(itemIndex, 1);
+          } else {
+            updatedCart[itemIndex].quantity -= 1;
+          }
+        }
+    
+        return updatedCart;
+      });
+    };
+    
 
     const clearCart = () => {
         setCart([])

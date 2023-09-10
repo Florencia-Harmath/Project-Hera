@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styles from "./ItemDetail.module.css";
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ item }) => {
   if (!item) {
@@ -9,8 +10,12 @@ const ItemDetail = ({ item }) => {
   return (
     <div className={styles['product-container']}>
       <h1 className={styles['product-name']}>{item.name}</h1>
-      <img src={item.image} alt={item.name} className={styles['product-image']}/>      
-      <p className={styles['product-detalle']}>{item.detalle}</p>
+      <img src={item.image} alt={item.name} className={styles['product-image']} />
+      <p className={styles['product-detalle']}>{item.detalle}
+        <Link to="/">
+          <button className={styles['btn-volver']}>Volver</button>
+        </Link>
+      </p>
     </div>
   );
 };

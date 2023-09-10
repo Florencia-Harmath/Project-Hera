@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../Context/CartContext'; 
+import { CartContext } from '../Context/CartContext';
 import styles from './ProductCart.module.css';
 import ItemCount from '../ItemCount/ItemCount';
 
@@ -9,8 +9,9 @@ const ProductCart = ({ product }) => {
   const [quantityToAdd, setQuantityToAdd] = useState(1);
 
   const handleAddToCart = () => {
-    addItem(product, quantityToAdd); 
+    addItem(product, quantityToAdd);
   };
+
 
   return (
     <div className={styles['product-cart']}>
@@ -21,14 +22,15 @@ const ProductCart = ({ product }) => {
       <p className={styles['product-price']}>${product.price}</p>
       <ItemCount
         initial={1}
-        stock={20}
-        onAdd={(quantity) => setQuantityToAdd(quantity)} 
+        stock={product.stock}
+        quantity={quantityToAdd}
+        onChange={setQuantityToAdd}
       />
+
       <button className={styles['btn-agregar']} onClick={handleAddToCart}>Agregar al carrito</button>
     </div>
   );
 };
 
 export default ProductCart;
-
 
