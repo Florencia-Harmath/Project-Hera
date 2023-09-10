@@ -57,6 +57,22 @@
     color: white;
   }
 
+  .boton-volver-form {
+    background-color: pink;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .boton-volver-form:hover {
+    background-color: rgba(255, 0, 255, 0.516);
+    color: white;
+  }
+
   .boton-volver {
     display: block;
     padding: .3em;
@@ -72,6 +88,6 @@
 
 .boton-volver:hover {
     color: white;
-    background-color: magenta;
+    background-color: rgba(255, 0, 255, 0.516);
 }
   

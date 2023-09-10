@@ -60,12 +60,15 @@
 .empty-cart-p {
     text-align: center;
     padding: .5em;
-    background-color: rgba(255, 192, 203, 0.498);
     margin-left: 450px;
     margin-right: 450px;
     margin-top: 50px;
     border-radius: 10px;
     font-size: 1.6rem;
+    color: black;
+    border: solid 1px rgba(255, 0, 255, 0.271);
+    box-shadow: 2px 2px 4px rgba(255, 0, 255, 0.271);
+    background-color: rgba(255, 192, 203, 0.498);
 }
 
 .empty-cart-btn {
@@ -82,8 +85,8 @@
 }
 
 .empty-cart-btn:hover {
+    background-color: rgba(255, 0, 255, 0.271);
     color: white;
-    background-color: magenta;
 }
 
 .vaciar-cart {
@@ -112,11 +115,17 @@
 }
 
 .vaciar-cart:hover {
+    background-color: rgba(255, 0, 255, 0.271);
     color: white;
-    background-color: magenta;
 } 
 
 .comprar-cart:hover {
+    background-color: rgba(255, 0, 255, 0.271);
     color: white;
-    background-color: magenta;
+}
+
+.cart-total{
+    text-align: center;
+    font-size: 2rem;
+    padding: .5em;
 }

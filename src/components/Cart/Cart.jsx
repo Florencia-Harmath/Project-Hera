@@ -1,14 +1,21 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../Context/CartContext';
-import ItemCount from '../ItemCount/ItemCount';
 import { FaTrash } from 'react-icons/fa';
 import styles from './Cart.module.css';
 
 const Cart = () => {
-    const { cart, addItem, removeItem, clearCart } = useContext(CartContext);
+    const { cart, removeItem, clearCart } = useContext(CartContext);
 
     const isEmpty = cart.length === 0;
+
+    const calculateTotal = () => {
+        let total = 0;
+        cart.forEach((item) => {
+            total += item.price * item.quantity;
+        });
+        return total;
+    };
 
     return (
         <div>
@@ -38,6 +45,9 @@ const Cart = () => {
                         ))}
                     </ul>
                     <div>
+                        <div className={styles['cart-total']}>
+                            <p>Total: ${calculateTotal()}</p>
+                        </div>
                         <button className={styles['vaciar-cart']} onClick={() => clearCart()}>Vaciar carrito</button>
                         <Link to="/checkout">
                             <button className={styles['comprar-cart']}>Realizar compra</button>

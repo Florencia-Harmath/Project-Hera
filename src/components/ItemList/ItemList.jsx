@@ -8,7 +8,7 @@ const ItemList = ({ items }) => {
   return (
     <div>
       <p className={styles['parrafo-home']}>En Hera creamos nuestros productos artesanalmente, cuidando cada detalle para un mejor cuidado de la salud y belleza.</p>
-      <h2 className={styles['titulo-home']}>Nuestros productos:</h2>      
+      <h2 className={styles['titulo-home']}>Nuestros productos: </h2>      
       <ul>
         <div className={styles['grid-container']}>
           {items.map((item) => (
