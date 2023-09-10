@@ -3,13 +3,19 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../Context/CartContext';
 import styles from './ProductCart.module.css';
 import ItemCount from '../ItemCount/ItemCount';
+import { toast } from 'react-toastify';
 
-const ProductCart = ({ product }) => {
+const ProductCart = React.memo(({ product }) => {
   const { addItem } = useContext(CartContext);
   const [quantityToAdd, setQuantityToAdd] = useState(1);
 
   const handleAddToCart = () => {
     addItem(product, quantityToAdd);
+    toast('Producto agregado al carrito', {
+      position: "top-left",
+      autoClose: 900,
+      theme: "colored",
+      });
   };
 
 
@@ -30,7 +36,7 @@ const ProductCart = ({ product }) => {
       <button className={styles['btn-agregar']} onClick={handleAddToCart}>Agregar al carrito</button>
     </div>
   );
-};
+});
 
 export default ProductCart;
 

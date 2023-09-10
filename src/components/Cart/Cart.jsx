@@ -4,6 +4,7 @@ import { CartContext } from '../Context/CartContext';
 import { FaTrash } from 'react-icons/fa';
 import styles from './Cart.module.css';
 
+
 const Cart = () => {
     const { cart, removeItem, clearCart } = useContext(CartContext);
 
@@ -52,6 +53,7 @@ const Cart = () => {
                         <Link to="/checkout">
                             <button className={styles['comprar-cart']}>Realizar compra</button>
                         </Link>
+                        <Link to="/"><button className={styles['ver-mas-cart']}> Ver mas productos  </button></Link>
                     </div>
                 </div>
             )}
