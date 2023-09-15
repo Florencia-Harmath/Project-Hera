@@ -4,20 +4,20 @@ import { getProduct } from "../../services";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
-  const [product, setProduct] = useState(null);
+  const [item, setItem] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
-    getProduct(Number(id))
+    getProduct(id)
       .then((response) => {
-        setProduct(response);
+        setItem(response);
       })
       .catch(() => {
-        setProduct(null);
+        setItem(null);
       });
   }, [id]);
 
-  return <ItemDetail item={product} />;
+  return <ItemDetail item={item} />;
 };
 
 export default ItemDetailContainer;

@@ -32,10 +32,10 @@ const Cart = () => {
                         {cart.map((item) => (
                             <li key={item.id} className={styles['li-cart']}>
                                 <div>
-                                    <img className={styles['img-cart']} src={item.image} alt={item.name} />
+                                    <img className={styles['img-cart']} src={`/public/img/${item.imageId}`} alt={item.title} />
                                 </div>
                                 <div>
-                                    <h3 className={styles['name-cart']}>{item.name}</h3>
+                                    <h3 className={styles['name-cart']}>{item.title}</h3>
                                 </div>
                                 <div className={styles['info-cart']}>
                                     <p className={styles['price-cart']}>Precio: ${item.price}</p>

@@ -9,8 +9,8 @@ const ItemDetail = ({ item }) => {
 
   return (
     <div className={styles['product-container']}>
-      <h1 className={styles['product-name']}>{item.name}</h1>
-      <img src={item.imageId} alt={item.title} className={styles['product-image']} />
+      <h1 className={styles['product-name']}>{item.title}</h1>
+      <img src={`/public/img/${item.imageId}`} alt={item.title} className={styles['product-image']} />
       <p className={styles['product-detalle']}>{item.description}
         <Link to="/">
           <button className={styles['btn-volver']}>Volver</button>

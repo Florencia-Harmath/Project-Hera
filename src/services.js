@@ -1,23 +1,24 @@
 import { doc, getDoc, collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 export const getProduct = (id) => {
- return new Promise = (id) => {
-  const db = getFirestore();
+  return new Promise((resolve, reject) => {
+    const db = getFirestore();
+    const itemDoc = doc(db, 'items', id);
 
-  const itemDoc = doc(db, 'items', id);
-
-  getDoc(itemDoc)
-    .then((doc) => {
-      if (doc.exists()) {
-        resolve({ id: doc.id, ...doc.data() })
-      } else {
-        reject("No existe el producto");
-      }
-    })
- }
-
-
+    getDoc(itemDoc)
+      .then((doc) => {
+        if (doc.exists()) {
+          resolve({ id: doc.id, ...doc.data() });
+        } else {
+          resolve(null);
+        }
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
 };
+
 
 export const getProducts = (categoryId) => {
   return new Promise((resolve, reject) => {

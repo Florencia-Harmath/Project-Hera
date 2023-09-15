@@ -18,11 +18,6 @@ function CheckOut() {
   const { clearCart, cart } = useContext(CartContext);
   const [orderId, setOrderId] = useState(null);
 
-  const handleOrderId = (id) => {
-  setOrderId(id);
-};
-
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -40,7 +35,7 @@ function CheckOut() {
         address: formData.address,
       },
       products: cart.map((item) => ({
-        name: item.name,
+        name: item.title,
         id: item.id,
         price: item.price,
         quantity: item.quantity,
@@ -55,7 +50,7 @@ function CheckOut() {
     addDoc(ordersCollection, orderData)
       .then((docRef) => {
         console.log("orden creada con id: ", docRef.id);
-        handleOrderId(docRef.id);
+        setOrderId(docRef.id);
       })
       .catch((error) => {
         console.log("Error al crear la orden");

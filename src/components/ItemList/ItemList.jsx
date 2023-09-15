@@ -8,7 +8,7 @@ const ItemList = React.memo(({ items }) => {
   const renderedItems = useMemo(() => {
     return items.map((item) => (
       <li key={item.id}>
-        <ProductCart product={item} />
+        <ProductCart item={item} />
         <ItemDetailContainer item={item} /> 
       </li>
     ));

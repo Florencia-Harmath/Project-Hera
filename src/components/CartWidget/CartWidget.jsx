@@ -9,10 +9,11 @@ const CartWidget = () => {
 
   return (
     <div>
-      <FaShoppingCart />
+      {totalQuantity > 0 && <FaShoppingCart />}
       {totalQuantity > 0 && <span>{totalQuantity}</span>}
     </div>
   );
 };
 
 export default CartWidget;
+
