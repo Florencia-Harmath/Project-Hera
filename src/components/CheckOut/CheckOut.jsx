@@ -3,19 +3,25 @@ import styles from './CheckOut.module.css';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../Context/CartContext';
 import { useContext } from 'react';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 function CheckOut() {
-
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
+    phone: '',
     email: '',
     address: '',
     paymentMethod: 'creditCard',
   });
 
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const { clearCart } = useContext(CartContext);
+  const { clearCart, cart } = useContext(CartContext);
+  const [orderId, setOrderId] = useState(null);
+
+  const handleOrderId = (id) => {
+  setOrderId(id);
+};
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -25,9 +31,53 @@ function CheckOut() {
     });
   };
 
+  const createOrder = () => {
+    const orderData = {
+      buyer: {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        address: formData.address,
+      },
+      products: cart.map((item) => ({
+        name: item.name,
+        id: item.id,
+        price: item.price,
+        quantity: item.quantity,
+      })),
+      total: calculateTotal(),
+    };
+
+    const db = getFirestore();
+
+    const ordersCollection = collection(db, "orders");
+
+    addDoc(ordersCollection, orderData)
+      .then((docRef) => {
+        console.log("orden creada con id: ", docRef.id);
+        handleOrderId(docRef.id);
+      })
+      .catch((error) => {
+        console.log("Error al crear la orden");
+      });
+
+    clearCart();
+
+    setIsFormSubmitted(true);
+
+  };
+
+  const calculateTotal = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total += item.price * item.quantity;
+    });
+    return total;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsFormSubmitted(true);
+    createOrder();
   };
 
   return (
@@ -35,7 +85,7 @@ function CheckOut() {
       <h2 className={styles['title']}>Finalizar compra</h2>
       {isFormSubmitted ? (
         <div>
-          <p>¡Compra exitosa! ¡Gracias por confiar en nosotros!</p>
+          <p>¡Compra exitosa! Código de seguimiento: {orderId}</p>
           <Link to="/">
             <button className={styles['boton-volver']}>Volver</button>
           </Link>
@@ -43,23 +93,23 @@ function CheckOut() {
       ) : (
         <form onSubmit={handleSubmit} className={styles['form']}>
           <div className={styles['form-group']}>
-            <label htmlFor="firstName">Nombre:</label>
+            <label htmlFor="name">Nombre:</label>
             <input
               type="text"
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
+              id="name"
+              name="name"
+              value={formData.name}
               onChange={handleInputChange}
               required
             />
           </div>
           <div className={styles['form-group']}>
-            <label htmlFor="lastName">Apellido:</label>
+            <label htmlFor="phone">Telefono:</label>
             <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              value={formData.lastName}
+              type="number"
+              id="phone"
+              name="phone"
+              value={formData.phone}
               onChange={handleInputChange}
               required
             />
@@ -97,9 +147,10 @@ function CheckOut() {
               <option value="paypal">PayPal</option>
             </select>
           </div>
-          <button type="submit" className={styles['submit-button']} onClick={() => clearCart()}>
+          <button type="submit" className={styles['submit-button']}>
             Finalizar Compra
           </button>
+
           <Link to="/"><button className={styles['boton-volver-form']}> Volver </button></Link>
         </form>
       )}
@@ -108,5 +159,3 @@ function CheckOut() {
 }
 
 export default CheckOut;
-
-

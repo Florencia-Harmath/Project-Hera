@@ -21,9 +21,9 @@ const ProductCart = React.memo(({ product }) => {
 
   return (
     <div className={styles['product-cart']}>
-      <img src={product.image} alt={product.name} className={styles['product-image']} />
+      <img src={product.imageId} alt={product.title} className={styles['product-image']} />
       <Link to={`/item/${product.id}`}>
-        <h3 className={styles['product-name']}>{product.name}</h3>
+        <h3 className={styles['product-name']}>{product.title}</h3>
       </Link>
       <p className={styles['product-price']}>${product.price}</p>
       <ItemCount
