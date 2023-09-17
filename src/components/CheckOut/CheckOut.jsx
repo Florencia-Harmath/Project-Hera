@@ -73,7 +73,7 @@ function CheckOut() {
   useEffect(() => {
     return () => {
       if (orderId) {
-      clearCart();
+        clearCart();
       }
     };
   }, [orderId]);
@@ -90,7 +90,7 @@ function CheckOut() {
             {cart.map((item) => (
               <li key={item.id} className={styles['li-checkout']}>
                 <div>
-                  <img className={styles['img-checkout']} src={`/public/img/${item.imageId}`} alt={item.title} />
+                  <img className={styles['img-checkout']} src={`/img/${item.imageId}`} alt={item.title} />
                 </div>
                 <p className={styles['name-checkout']}>{item.title}</p>
                 <p className={styles['price-checkout']}> - ${item.price} -</p>
@@ -105,6 +105,7 @@ function CheckOut() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className={styles['form']}>
+          <p>Completa tus datos para finalizar tu compra!</p>
           <div className={styles['form-group']}>
             <label htmlFor="name">Nombre:</label>
             <input
@@ -169,6 +170,6 @@ function CheckOut() {
       )}
     </div>
   );
-} 
+}
 
 export default CheckOut;

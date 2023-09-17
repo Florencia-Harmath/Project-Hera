@@ -55,7 +55,7 @@
   }
   
   .submit-button:hover {
-    background-color: rgba(255, 0, 255, 0.516);
+    background-color: rgba(255, 0, 255, 0.271);
     color: white;
   }
 
@@ -72,7 +72,7 @@
   }
 
   .boton-volver-form:hover {
-    background-color: rgba(255, 0, 255, 0.516);
+    background-color: rgba(255, 0, 255, 0.271);
     color: white;
   }
 
@@ -91,7 +91,7 @@
 
 .boton-volver:hover {
     color: white;
-    background-color: rgba(255, 0, 255, 0.516);
+    background-color: rgba(255, 0, 255, 0.271);
 }
 
 .img-checkout {
@@ -154,5 +154,5 @@
 .p-compra-detalle {
   margin-top: 50px;
   font-size: 1.2rem;
-  
+
 }
