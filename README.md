@@ -40,7 +40,7 @@ Este ecommerce ofrece a la venta productos de cuidado facial, corporal y capilar
 
 Puedes proporcionar un enlace a una demo en línea de tu proyecto. Si tienes una demo en vivo, sería genial para que los usuarios puedan explorar tu sitio. También puedes incluir instrucciones para ejecutar una demo localmente si es posible.
 
-[Ver la Demo](public/video/demo)
+[Ver la Demo](public/video/demo.avi)
 
 ## Requisitos
 
