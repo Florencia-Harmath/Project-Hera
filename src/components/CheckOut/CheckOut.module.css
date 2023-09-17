@@ -93,4 +93,66 @@
     color: white;
     background-color: rgba(255, 0, 255, 0.516);
 }
+
+.img-checkout {
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  margin-top: 3px;
+}
+
+.li-checkout {
+  display: flex;
+  border: solid 1px rgba(255, 0, 255, 0.271);
+  box-shadow: 2px 2px 4px rgba(255, 0, 255, 0.271);
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.name-checkout {
+  display: flex;
+  text-align: center;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.price-checkout {
+  display: flex;
+  text-align: center;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+.cant-checkout {
+  display: flex;
+  text-align: center;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+.checkout-total{
+  text-align: center;
+  font-size: 1.5rem;
+  padding: .5em;
+}
+
+.p-compra-exitosa {
+  font-size: 1.3rem;
+  margin: 5px;
+}
+
+.p-compra-detalle {
+  margin-top: 50px;
+  font-size: 1.2rem;
   
+}

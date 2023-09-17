@@ -1,17 +1,83 @@
-.product-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 70px 500px;
-    gap: 15px;
-    margin: 10px;
-}
+/* ItemDetail.module.css */
 
-.product-name {
-    grid-column: span 2;
-    background-color: pink;
-    padding: .2em;
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-}
+  }
+  
+  .product-name {
+    font-size: 2rem;
+    background-color: pink;
+    width: 100%;
+  }
+  
+  .product-image {
+    height: 400px;
+    width: 80%;
+    border-radius: 5px;
+    object-fit: cover;
+    margin: 10px;
+  }
+  
+  .product-detalle {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-right: 70px;
+  }
+  
+  .btn-volver {
+    display: block;
+    font-size: 1.3rem;
+    width: 100%;
+    padding: .2em;
+    margin-bottom: 20px;
+    color: black;
+    border: solid 1px rgba(255, 0, 255, 0.271);
+    box-shadow: 2px 2px 4px rgba(255, 0, 255, 0.271);
+    background-color: rgba(255, 192, 203, 0.498);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-volver:hover {
+    background-color: rgba(255, 0, 255, 0.271);
+    color: white;
+  }
+  
+  .boton-agregar {
+    display: block;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: .2em;
+    color: black;
+    border: solid 1px rgba(255, 0, 255, 0.271);
+    box-shadow: 2px 2px 4px rgba(255, 0, 255, 0.271);
+    background-color: rgba(255, 192, 203, 0.498);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .boton-agregar:hover {
+    background-color: rgba(255, 0, 255, 0.271);
+    color: white;
+  }
+
+  .info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+
+
+/* 
 
 .product-image {
     height: 100%;
@@ -47,3 +113,19 @@
     background-color: magenta;
 }
 
+.boton-agregar {
+    padding: .3em;
+    width: 30%;
+    margin-right: 150px;
+    margin: auto;
+    border-radius: 10px;
+    border: solid 1px rgba(255, 0, 255, 0.271);
+    box-shadow: 2px 2px 4px rgba(255, 0, 255, 0.271);
+    cursor: pointer;
+    grid-column: span 2;
+  }
+
+  .boton-agregar:hover  {
+    background-color: rgba(255, 0, 255, 0.271);
+    color: white;
+  } */
