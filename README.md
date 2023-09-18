@@ -1,7 +1,5 @@
 # HERA Cosmetica
 
-![Logo del Proyecto](enlace/a/tu/logo.png) (Si tienes un logo)
-
 HERA Cosmetica es un ecommerce que ofrece a la venta productos de belleza y cuidado femenino.
 
 ## Tabla de Contenidos
@@ -17,7 +15,7 @@ HERA Cosmetica es un ecommerce que ofrece a la venta productos de belleza y cuid
 
 ## Descripción
 
-Este ecommerce ofrece a la venta productos de cuidado facial, corporal y capilar femenino. Posee una página principal con todos los productos, y la opción de filtrar por categorias en la barra de navegación. 
+Este ecommerce ofrece a la venta productos de cuidado facial, corporal y capilar femenino. Posee una página principal con todos los productos, y la opción de filtrar por categorias en la barra de navegación.  
 
 ## Capturas de Pantalla
 
@@ -40,7 +38,7 @@ Este ecommerce ofrece a la venta productos de cuidado facial, corporal y capilar
 
 Puedes proporcionar un enlace a una demo en línea de tu proyecto. Si tienes una demo en vivo, sería genial para que los usuarios puedan explorar tu sitio. También puedes incluir instrucciones para ejecutar una demo localmente si es posible.
 
-[Ver la Demo](public/video/demo.avi)
+[Ver la Demo](public/video/demo.webm)
 
 ## Requisitos
 
@@ -63,7 +61,7 @@ La aplicación debería estar disponible en el localhost, en tu navegador web.
 
 ## Uso
 
-La sección principal de la página posee un listado de todos los productos que el emprendimiento ofrece. Posee una barra de navegación, donde tiene las opciones de filtrado de productos por categoria,  "Faciales" "Capilares" y "Corporales", la barra de navegación también posee un brand con el nombre del emprendimiento, que al clickearlo lleva a la pagina principal. Cada cart posee el nombre de cada producto, el cual es un link que al clickearlo lleva a la descripcion de cada uno en particular. Para agregar los productos al carrito, se clickea el boton "Agregar al carrito", también tiene un contador que te permite agregar más de un producto sin exceder el limite del stock. Al agregar productos al carrito, aparece en el navbar el widget del carrito con la cantidad de productos agregados, su descripción, su precio y el total. EL carrito posee tres botones, "vaciar carrito" "ver mas productos" y "realizar compra" Una vez seleccionados los productos deseados, se clickea en "realizar  comppra" donde hay un formulario con datos obligatorios que debe llenar el cliente y seleccionar el metodo de pago, una vez hecho, se muestra un cartel que dice que la compra fue exitosa yse muestra el detalle y de la compra y un codigo de seguimiento que es el ID de la orden que al finalizar se genera en Firebase. 
+La sección principal de la página posee un listado de todos los productos que el emprendimiento ofrece, traidos desde la base de datos de firebase, firestore. Los datos para su utilización se encuentran en el archivo .env, que se encuentra en gitignore para cuidar los datos sensibles, las fotos se encuentran guardadas en el proyecto, en la carpeta public/img. La pagina posee una barra de navegación, donde tiene las opciones de filtrado de productos por categoria,  "Faciales" "Capilares" y "Corporales", la barra de navegación también posee un brand con el nombre del emprendimiento, que al clickearlo lleva a la pagina principal, todos los link creados con react-router-dom. Cada productCart posee la imagen, el precio, el boton de agregar al carrito con un contador que te permite agregar más de un producto sin exceder el limite del stock, y el nombre de cada producto, el cual es un link que al clickearlo lleva a la descripcion de cada uno en particular, donde aparece el detalle del producto, y la opción de agregarlo al carrito como en el productCart. Para agregar los productos, se clickea el boton "Agregar al carrito", se utilizó toastify para la notificación del producto agregado. Al agregar productos al carrito, aparece en el navbar el widget del carrito con la cantidad de productos agregados, su descripción, su precio y el total. EL carrito posee tres botones, "vaciar carrito" "ver mas productos" y "realizar compra" Una vez seleccionados los productos deseados, se clickea en "realizar  comppra" donde hay un formulario con datos obligatorios que debe llenar el cliente y seleccionar el metodo de pago, una vez hecho, se muestra un cartel que dice que la compra fue exitosa, se muestra el detalle de la compra y un codigo de seguimiento que es el ID de la orden que al finalizar se genera en Firebase. 
 
 
 ## Licencia
