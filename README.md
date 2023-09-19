@@ -30,16 +30,14 @@ This ecommerce offers women's facial, body and hair care products for sale. It h
 ## Characteristics
 
 - Catalog of hair, body and facial products.
-- Filtering products by categories
+- Filtering products by categories.
 - Shopping cart and payment process.
 - User registration.
 - Generation of orders and management of products in Firebase.
 
 ## Demo
 
-Click on the link to see the demo.
 
-[See the demo](public/video/demo.webm)
 
 ## Requirements
 
@@ -59,6 +57,16 @@ Follow these steps to install and run the app:
 3. Install the project dependencies using npm: npm install.
 4. Start the application: npm run dev.
 The application should be available on localhost, in your web browser.
+
+For correct operation, you must have the environment variables of the .env file set:
+  apiKey: import.meta.env.VITE_REACT_APP_apiKey,
+  authDomain: import.meta.env.VITE_REACT_APP_authDomain,
+  projectId: import.meta.env.VITE_REACT_APP_projectId,
+  storageBucket: import.meta.env.VITE_REACT_APP_storageBucket,
+  messagingSenderId: import.meta.env.VITE_REACT_APP_messagingSenderId,
+  appId: import.meta.env.VITE_REACT_APP_appId.
+
+
 
 ## Use
 
