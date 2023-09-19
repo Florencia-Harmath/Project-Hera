@@ -5,6 +5,7 @@ import CartWidget from '../CartWidget/CartWidget';
 const NavBar = () => {
   return (
     <nav className={styles['nav']}>
+      
       <div className={styles['enlaces-menu']}>
         <h1>
           <Link to="/" className={styles['enlaces-menu-titulo']}>HERA Cosmética</Link>

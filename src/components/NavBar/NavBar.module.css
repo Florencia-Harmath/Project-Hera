@@ -37,8 +37,8 @@
 }
 
 .enlaces-menu-titulo {
-    color: black;
-    text-align: left;
+    color: black; 
+   font-size: 2rem;
 }
 
 .enlaces-menu-titulo:hover {

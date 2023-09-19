@@ -1,23 +1,23 @@
 # HERA Cosmetica
 
-HERA Cosmetica es un ecommerce que ofrece a la venta productos de belleza y cuidado femenino.
+HERA Cosmetica is an ecommerce that offers beauty and feminine care products for sale.
 
 ## Tabla de Contenidos
 
-1. [Descripción](#descripción)
-2. [Capturas de Pantalla](#capturas-de-pantalla)
-3. [Características](#características)
+1. [Description](#description)
+2. [Screenshots](#screenshot)
+3. [Characteristics](#characteristics)
 4. [Demo](#demo)
-5. [Requisitos](#requisitos)
-6. [Instalación](#instalación)
-7. [Uso](#uso)
-8. [Licencia](#licencia)
+5. [Requirements](#requirements)
+6. [Installation](#installation)
+7. [Use](#use)
+8. [License](#license)
 
-## Descripción
+## Description
 
-Este ecommerce ofrece a la venta productos de cuidado facial, corporal y capilar femenino. Posee una página principal con todos los productos, y la opción de filtrar por categorias en la barra de navegación.  
+This ecommerce offers women's facial, body and hair care products for sale. It has a main page with all the products, and the option to filter by categories in the navigation bar.
 
-## Capturas de Pantalla
+## Screenshot
 
 ![Captura de Pantalla 1](public/img/captura-1.png)
 ![Captura de Pantalla 2](public/img/captura-2.png)
@@ -26,45 +26,45 @@ Este ecommerce ofrece a la venta productos de cuidado facial, corporal y capilar
 ![Captura de Pantalla 5](public/img/captura-5.png)
 ![Captura de Pantalla 6](public/img/captura-6.png)
 
-## Características
+## Characteristics
 
-- Catálogo de productos capilares, corporales y faciales.
-- Filtrado de productos por categorias
-- Carrito de compras y proceso de pago.
-- Registro de usuarios y autenticación.
-- Generación de ordenes y manejo de los productos en firebase.
+- Catalog of hair, body and facial products.
+- Filtering products by categories
+- Shopping cart and payment process.
+- User registration and authentication.
+- Generation of orders and management of products in Firebase.
 
 ## Demo
 
-Haz click en el enlace para ver la demo.
+Click on the link to see the demo.
 
-[Ver la Demo](public/video/demo.webm)
+[See the demo](public/video/demo.webm)
 
-## Requisitos
+## Requirements
 
-Antes de comenzar a trabajar con este proyecto, asegúrate de cumplir con los siguientes requisitos:
+Before you start working on this project, make sure you meet the following requirements:
 
-- **Node.js y npm:** Debes tener Node.js instalado en tu sistema. Puedes descargarlo desde [nodejs.org](https://nodejs.org/).
+- **Node.js y npm:** You must have Node.js installed on your system. You can download it from [nodejs.org](https://nodejs.org/).
 
-- **Git:** Se recomienda tener Git instalado para gestionar el control de versiones de tu proyecto. Puedes descargarlo desde [git-scm.com](https://git-scm.com/).
-
-
-## Instalación
-
-Sigue estos pasos para instalar y ejecutar la aplicación:
-
-1. Clona este repositorio en tu máquina local utilizando Git: git clone https://github.com/Florencia-Harmath/hera-react.git.
-2. Navega al directorio del proyecto: cd hera-project.
-3. Instala las dependencias del proyecto utilizando npm: npm install.
-4. Inicia la aplicación: npm run dev.
-La aplicación debería estar disponible en el localhost, en tu navegador web.
-
-## Uso
-
-La sección principal de la página posee un listado de todos los productos que el emprendimiento ofrece, traidos desde la base de datos de firebase, firestore. Los datos para su utilización se encuentran en el archivo .env, que se encuentra en gitignore para cuidar los datos sensibles, las fotos se encuentran guardadas en el proyecto, en la carpeta public/img. La pagina posee una barra de navegación, donde tiene las opciones de filtrado de productos por categoria,  "Faciales" "Capilares" y "Corporales", la barra de navegación también posee un brand con el nombre del emprendimiento, que al clickearlo lleva a la pagina principal, todos los link creados con react-router-dom. Cada productCart posee la imagen, el precio, el boton de agregar al carrito con un contador que te permite agregar más de un producto sin exceder el limite del stock, y el nombre de cada producto, el cual es un link que al clickearlo lleva a la descripcion de cada uno en particular, donde aparece el detalle del producto, y la opción de agregarlo al carrito como en el productCart. Para agregar los productos, se clickea el boton "Agregar al carrito", se utilizó toastify para la notificación del producto agregado. Al agregar productos al carrito, aparece en el navbar el widget del carrito con la cantidad de productos agregados, su descripción, su precio y el total, también posee la opción de eliminar el producto, o eliminar de a un producto en caso de haber más, con el tacho de basura (react-icons). EL carrito posee tres botones, "vaciar carrito" "ver mas productos" y "realizar compra" Una vez seleccionados los productos deseados, se clickea en "realizar  comppra" donde hay un formulario con datos obligatorios que debe llenar el cliente y seleccionar el metodo de pago, una vez hecho, se muestra un cartel que dice que la compra fue exitosa, se muestra el detalle de la compra y un codigo de seguimiento que es el ID de la orden que al finalizar se genera en Firebase. 
+- **Git:** It is recommended to have Git installed to manage version control of your project. You can download it from [git-scm.com](https://git-scm.com/).
 
 
-## Licencia
+## Installation
 
-Este es un proyecto con fines didácticos, por lo que no posee funcionalidad comercial, ni tampoco ofrece datos sensibles. Todos los productos son ficticios, no se puede utilizar con fines comerciales.
+Follow these steps to install and run the app:
+
+1. Clone this repository to your local machine using Git: git clone https://github.com/Florencia-Harmath/hera-react.git.
+2. Navigate to the project directory: cd hera-project.
+3. Install the project dependencies using npm: npm install.
+4. Start the application: npm run dev.
+The application should be available on localhost, in your web browser.
+
+## Use
+
+The main section of the page has a list of all the products that the company offers, brought from the firebase database, firestore. The data for its use is found in the .env file, which is located in gitignore to protect sensitive data, the photos are saved in the project, in the public/img folder. The page has a navigation bar, where you have the options to filter products by category, "Faciales", "Capilares" and "Corporales", the navigation bar also has a brand with the name of the venture, which when clicked takes you to the main page, all links created with react-router-dom. Each productCart has the image, the price, the add to cart button with a counter that allows you to add more than one product without exceeding the stock limit, and the name of each product, which is a link that when clicked takes you to the description of each one in particular, where the product detail appears, and the option to add it to the cart as in the productCart. To add the products, click the "Agregar al carrito" button, toastify was used to notify the added product. When adding products to the cart, the cart widget appears in the navbar with the number of products added, their description, their price and the total, it also has the option to delete the product, or delete one product at a time if there are more, with the trash can (react-icons). The cart has three buttons, "vaciar carrito", "ver mas productos" and "realizar compra". Once the desired products have been selected, click on "realizar compra" where there is a form with mandatory data that the customer must fill out and select the method. payment, once made, a sign is displayed that says that the purchase was successful, the purchase detail is shown and a tracking code is the ID of the order that is generated in Firebase at the end. 
+
+
+## License
+
+This is a project for educational purposes, so it does not have commercial functionality, nor does it offer sensitive data. All products are fictitious, cannot be used for commercial purposes.
 
