@@ -19,19 +19,20 @@ This ecommerce offers women's facial, body and hair care products for sale. It h
 
 ## Screenshot
 
-![Captura de Pantalla 1](public/img/captura-1.png)
 ![Captura de Pantalla 2](public/img/captura-2.png)
+![Captura de Pantalla 6](public/img/captura-6.png)
+![Captura de Pantalla 1](public/img/captura-1.png)
 ![Captura de Pantalla 3](public/img/captura-3.png)
 ![Captura de Pantalla 4](public/img/captura-4.png)
 ![Captura de Pantalla 5](public/img/captura-5.png)
-![Captura de Pantalla 6](public/img/captura-6.png)
+
 
 ## Characteristics
 
 - Catalog of hair, body and facial products.
 - Filtering products by categories
 - Shopping cart and payment process.
-- User registration and authentication.
+- User registration.
 - Generation of orders and management of products in Firebase.
 
 ## Demo
