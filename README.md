@@ -2,7 +2,7 @@
 
 HERA Cosmetica is an ecommerce that offers beauty and feminine care products for sale.
 
-## Tabla de Contenidos
+## Table of Contents
 
 1. [Description](#description)
 2. [Screenshots](#screenshot)
