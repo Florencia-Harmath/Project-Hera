@@ -37,6 +37,7 @@ This ecommerce offers women's facial, body and hair care products for sale. It h
 
 ## Demo
 
+[screen-capture.webm](https://github.com/Florencia-Harmath/Hera-React/assets/130718452/8aa838ca-f7d3-4869-8158-a6d74b6b543b)
 
 
 ## Requirements
