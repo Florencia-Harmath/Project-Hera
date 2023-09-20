@@ -1,6 +1,6 @@
 # HERA Cosmetica
 
-HERA Cosmetica is an ecommerce that offers beauty and feminine care products for sale.
+HERA Cosmetica is an ecommerce that offers beauty and feminine care products for sale. The project is created with the React library, using vite as a compilation tool. The styles were created with css module.
 
 ## Table of Contents
 
